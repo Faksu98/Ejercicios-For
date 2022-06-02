@@ -1,6 +1,6 @@
 const CANTIDAD_MAXIMA = 7;
 
-let cantidadIngresada = "por def";
+let vipCambiado = "por def";
 
 for (let i = 1; i <= CANTIDAD_MAXIMA; i++){
     document.querySelector("#cantidad_seleccionada").innerHTML+=`
@@ -9,14 +9,14 @@ for (let i = 1; i <= CANTIDAD_MAXIMA; i++){
 }
 
 function cambiar(){
-    console.log(cantidadIngresada)   
-    if (cantidadIngresada != "por def"){
-       document.querySelector(`#Op${cantidadIngresada}`).innerHTML= `
-       OPCION ${cantidadIngresada}
+    console.log(vipCambiado)   
+    if (vipCambiado != "por def"){
+       document.querySelector(`#Op${vipCambiado}`).innerHTML= `
+       OPCION ${vipCambiado}
        `;
     }
-    cantidadIngresada = document.querySelector("#convertir_vip").value;
-    document.querySelector(`#Op${cantidadIngresada}`).innerHTML+= `
+    vipCambiado = document.querySelector("#convertir_vip").value;
+    document.querySelector(`#Op${vipCambiado}`).innerHTML+= `
     VIP 
     `;
 }
